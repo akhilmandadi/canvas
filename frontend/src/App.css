@@ -1,0 +1,86 @@
+
+
+.row {
+  margin-right: 0px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.nav > li > a:hover{
+  border-bottom: 2px solid #444;
+  background-color: white;
+}
+
+.navVisited{
+  border-bottom: 2px solid #1569e0;
+  background-color: white;
+}
+
+.navHover{
+  border-bottom: 2px solid #444;
+  background-color: white;
+}
+
+.nav > li > a{
+  background-color:white;
+  color: black;
+}
+
+.searchBar:hover{
+  border: "1px solid brown";
+  background-color: cadetblue;
+}
+
+.inner > li > a:hover{
+  background-color:white;
+  color: white;
+}
+
+.fab {
+  margin: 0px;
+  top: auto;
+  right: 0px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+};
+
+.cardBox {
+  box-shadow:0 2px 5px rgba(0,0,0,0.3)
+}
+
+.addNew:hover{
+  border-radius: 5px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.3)
+}
+
+.cardBox:hover {
+  box-shadow:0 4px 10px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+.cardBoxColor:hover {
+  text-decoration: underline;
+}
+
+.leftnav:hover {
+  background-color:#004280 !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(167, 167, 167); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
