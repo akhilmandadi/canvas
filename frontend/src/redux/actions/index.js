@@ -7,11 +7,16 @@ import { FETCH_CARDS_OF_USER } from "../constants/action-types";
 import { TOGGLE_CREATE_CARD } from "../constants/action-types";
 import { CREATE_CARD_SUCCESS } from "../constants/action-types";
 import { CREATE_CARD_FAILURE } from "../constants/action-types";
+import { CLOSE_SIGNUP_MODAL } from "../constants/action-types";
 import axios from 'axios';
 import bcrypt from 'bcryptjs'
 
 export function loginUserSuccess(payload) {
     return { type: LOGIN_USER_SUCCESS, payload };
+}
+
+export function closeSignupModal(payload) {
+    return { type: CLOSE_SIGNUP_MODAL, payload };
 }
 
 export function loginUserFailure(payload) {

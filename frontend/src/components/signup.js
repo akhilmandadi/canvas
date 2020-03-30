@@ -9,7 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { Redirect } from 'react-router';
 import bcrypt from 'bcryptjs'
 import { connect } from "react-redux";
-import { signUpUser } from "../redux/actions/index"
+import { signUpUser, closeSignupModal } from "../redux/actions/index"
 
 class SignUp extends Component {
     constructor(props) {
@@ -120,6 +120,7 @@ class SignUp extends Component {
         this.setState({
             redirectToSignIn: true
         })
+        this.props.closeSignupModal();
     }
     render() {
         let redirectToSignIn = null;
@@ -212,7 +213,8 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        signUpUser: payload => dispatch(signUpUser(payload))
+        signUpUser: payload => dispatch(signUpUser(payload)),
+        closeSignupModal: payload => dispatch(closeSignupModal(payload))
     };
 }
 

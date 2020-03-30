@@ -3,7 +3,7 @@ import {
     LOGIN_USER_FAILURE, SIGNUP_USER_SUCCESS,
     SIGNUP_USER_FAILURE, FETCH_CARDS_OF_USER,
     TOGGLE_CREATE_CARD, CREATE_CARD_FAILURE,
-    CREATE_CARD_SUCCESS,
+    CREATE_CARD_SUCCESS, CLOSE_SIGNUP_MODAL
 } from "../constants/action-types";
 const initialState = {
     user: {
@@ -30,6 +30,7 @@ function rootReducer(state = initialState, action) {
             user: action.payload,
             invalidCredentials: false,
             profile: action.payload,
+            cards: action.payload.cards
         });
     }
     if (action.type === LOGIN_USER_FAILURE) {
@@ -43,6 +44,11 @@ function rootReducer(state = initialState, action) {
         return Object.assign({}, state, {
             signUpSuccessful: true,
             signupFailedError: false
+        });
+    }
+    if (action.type === CLOSE_SIGNUP_MODAL) {
+        return Object.assign({}, state, {
+            signUpSuccessful: false
         });
     }
     if (action.type === SIGNUP_USER_FAILURE) {
@@ -62,7 +68,8 @@ function rootReducer(state = initialState, action) {
                 "id": "",
                 "email": "",
                 "token": ""
-            }
+            },
+            cards: []
         });
     }
     if (action.type === FETCH_CARDS_OF_USER) {
